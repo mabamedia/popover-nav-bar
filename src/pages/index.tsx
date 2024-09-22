@@ -1,9 +1,16 @@
 export default function Home() {
   return (
     <>
-      <div popover="auto" id="menu">
+      <div></div>
+
+      <div
+        popover="auto"
+        id="menu"
+        className="ring-[1px] ring-[rgba(255,255,255,0.2)] ring-inset"
+      >
         <div className="content">
           <div className="content__content"></div>
+
           <ul aria-hidden="true">
             <li style={{ "--i": 0 }}>Logo</li>
             <li style={{ "--i": 1 }}>Menu</li>
@@ -11,17 +18,19 @@ export default function Home() {
         </div>
       </div>
 
-      <nav className="nav">
-        <ul>
-          <li>Logo</li>
+      <div id="cta">
+        <nav className="nav ring-[1px] ring-[rgba(255,255,255,0.2)] ring-inset">
+          <ul>
+            <li>Logo</li>
 
-          <li>
-            <button popoverTarget="menu" popoverTargetAction="toggle">
-              Menu
-            </button>
-          </li>
-        </ul>
-      </nav>
+            <li>
+              <button popoverTarget="menu" popoverTargetAction="toggle">
+                Menu
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </>
   );
 }
